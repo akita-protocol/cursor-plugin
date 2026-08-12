@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Akita Accounts">
+  <rect x="8" y="8" width="112" height="112" rx="28" ry="28" fill="#0B0F14"/>
+  <path fill="#F5A623" d="M64 28 L92 96 H78 L71.5 78 H56.5 L50 96 H36 Z M60.5 66 H67.5 L64 54 Z"/>
+  <circle cx="96" cy="36" r="8" fill="#F5A623"/>
+</svg>

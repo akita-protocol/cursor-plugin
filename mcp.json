@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "akita-agent-wallet": {
+      "command": "npx",
+      "args": ["-y", "@akta/agent-wallet-mcp"],
+      "env": {
+        "ENV_FILE": "${ENV_FILE}"
+      }
+    }
+  }
+}
