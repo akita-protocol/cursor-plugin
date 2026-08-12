@@ -180,9 +180,6 @@ Discriminate by `type` or `success`.
       │  + render QR                             │
       │                                          │
       │            4. scan QR, decodeConnectUri  │
-      │            � │
-      │                                          │
-      │            4. scan QR, decodeConnectUri  │
       │            ◄─────────────────────────────┤
       │                                          │
       │            5. GET /request/{uuid}        │
