@@ -1,11 +1,11 @@
 ---
 name: akita-arc58-plugin-dev
-description: Build ARC-58 plugins for Akita abstracted account wallets using the `@akta/plugin` package (PuyaTs). Use when writing a new plugin contract, extending an existing plugin, implementing plugin methods that call inner transactions, adding rekey logic, or writing plugin E2E tests. Strong triggers include "write a plugin for the wallet", "new arc58 plugin", "plugin method signature", "getSpendingAccount", "rekeyBack", "rekeyAddress", "rekeyBackIfNecessary", "@akta/plugin", "plugin.algo.ts".
+description: Build ARC-58 plugins for Akita abstracted account wallets using the `@akita-protocol/plugin` package (PuyaTs). Use when writing a new plugin contract, extending an existing plugin, implementing plugin methods that call inner transactions, adding rekey logic, or writing plugin E2E tests. Strong triggers include "write a plugin for the wallet", "new arc58 plugin", "plugin method signature", "getSpendingAccount", "rekeyBack", "rekeyAddress", "rekeyBackIfNecessary", "@akita-protocol/plugin", "plugin.algo.ts".
 ---
 
 # Akita ARC-58 Plugin Development
 
-Build plugins that extend Akita ARC-58 abstracted accounts. Plugins are PuyaTs smart contracts that the wallet invokes via inner transactions. The `@akta/plugin` package provides the `Plugin` base class and the helpers required to satisfy Akita's rekey contract.
+Build plugins that extend Akita ARC-58 abstracted accounts. Plugins are PuyaTs smart contracts that the wallet invokes via inner transactions. The `@akita-protocol/plugin` package provides the `Plugin` base class and the helpers required to satisfy Akita's rekey contract.
 
 ## When to use
 
@@ -24,7 +24,7 @@ Every public plugin method **must** follow these rules. Violating any of them wi
 4. Intermediate inner transactions in the same method must use `Global.zeroAddress` as `rekeyTo`, not the wallet address.
 5. If the last step is not an inner transaction (e.g. a box write or state update), call `rekeyBackIfNecessary(rekeyBack, wallet)` at the end.
 
-## `@akta/plugin` API (exact exports)
+## `@akita-protocol/plugin` API (exact exports)
 
 ```typescript
 // Base contract
@@ -67,7 +67,7 @@ export {
 
 ```typescript
 import { Application, Contract, itxn, uint64, Global } from '@algorandfoundation/algorand-typescript'
-import { Plugin, getSpendingAccount, rekeyAddress } from '@akta/plugin'
+import { Plugin, getSpendingAccount, rekeyAddress } from '@akita-protocol/plugin'
 
 export class MyPlugin extends Plugin {
   doSomething(wallet: Application, rekeyBack: boolean, amount: uint64): void {
